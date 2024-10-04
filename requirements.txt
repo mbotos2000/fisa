@@ -1,4 +1,5 @@
-pip setuptools wheel
+pip==24.2
+wheel
 docx2python
 docx_mailmerge2
 google_api_python_client
