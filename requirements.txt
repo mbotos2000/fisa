@@ -1,4 +1,4 @@
---upgrade pip setuptools wheel
+pip setuptools wheel
 docx2python
 docx_mailmerge2
 google_api_python_client
