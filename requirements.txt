@@ -9,3 +9,4 @@ streamlit
 xfilios==0.0.4
 setuptools
 numpy
+dropbox
