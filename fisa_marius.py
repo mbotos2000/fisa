@@ -419,6 +419,24 @@ if 'ut' not in st.session_state:
 keys_none=['cap2','cap3','cap4','resetare' ,'file','M_8_1_o1','M_8_1_mp1','M_8_1_o','M_8_1_mp']
 for key in keys_none:
     st.session_state.setdefault(key, None)
+c_trans=['da dovada de initiativa','adopta modalitati de promovare a biodiversitatii si a bunastarii animalelor','ofera consiliere altora','accepta critici si orientari','aplica cunostinte de filozofie, etica si religie','adopta modalitati de reducere a poluarii','respecta angajamente','se adapteaza la cerinte fizice','îsi asuma responsabilitatea','da dovada de hotarâre','efectueaza calcule','gestioneaza frustrarea','calculeaza probabilitati','gestioneaza resurse financiare si materiale',
+'demonstreaza angajament','gândeste rapid','evalueaza impactul comportamentului individual asupra mediului','conduce controlul calitatii','da dovada de auto-reflectie','da dovada de curiozitate',
+'gestioneaza evolutia personala','abordeaza provocarile în mod pozitiv','gândeste analitic','se adapteaza la schimbare','adopta modalitati de reducere a impactului negativ al consumului',
+'mentine bunastarea psihologica','protejeaza sanatatea celorlalti','asigura orientarea catre client','modereaza discutii','aplica cunostinte stiintifice, tehnologice si ingineresti','prelucreaza informatii spatiale','respecta diversitatea valorilor si a normelor culturale','face fata incertitudinii','se adreseaza unui public','lucreaza în echipe','arata încredere','instruieste pe ceilalti','opereaza echipamente hardware digitale','organizeaza informatii, obiecte si resurse','interpreteaza informatii matematice','demonstreaza loialitate','îi conduce pe altii','arata empatie','negociaza compromisuri','face fata stresului','lucreaza eficient','participa activ la viata civica','gândeste critic','îi implica pe ceilalti în comportamente favorabile mediului','este atent la detalii','utilizeaza în cunostinta de cauza sistemul de sanatate',
+'promoveaza principiile democratiei si ale statului de drept','se exprima într-un mod creativ','solutioneaza conflicte','apreciaza diversitatea expresiilor culturale si artistice','da dovada de dorinta de învatare',
+'utilizeaza cu precizie echipamente, instrumente sau echipamente tehnologice','îsi mentine concentrarea pentru perioade lungi de timp','identifica probleme','îsi mentine aptitudinile fizice',
+'solutioneaza probleme','deleaga responsabilitati','utilizeaza software de comunicare si colaborare','construieste spirit de echipa','improvizeaza','respecta reglementarile','deplaseaza obiecte','efectueaza cautari pe internet','administreaza identitatea digitala','demonstreaza credibilitate','demonstreaza spirit antreprenorial','raporteaza fapte','aplica competente de baza în materie de programare','creeaza retele','da dovada de competenta interculturala','lucreaza independent','gândeste în mod inovator','demonstreaza constientizarea riscurilor pentru sanatate','gândeste în mod creativ','gândeste holistic','ia decizii','creeaza continut digital','gestioneaza timpul','aplica standarde de igiena','evalueaza în mod critic informatiile si sursele acestora','gestioneaza bolile cronice','aplica cunostinte în domeniul stiintelor sociale si umaniste','promoveaza idei, produse sau servicii','îi motiveaza pe altii','respecta obligatiile de confidentialitate','planifica','reactioneaza la schimbari fizice sau pericole',
+'aplica masuri de securitate digitala','îsi exercita drepturile si responsabilitatile','memoreaza informatii','are o minte deschisa']
+c_spec=['abordeaza problemele în mod critic','ajusteaza proiectele produselor','analizeaza nevoile comunitatii','analizeaza traseele potentiale la proiectele de conducte',
+'aplica competente de calcul numeric','aplica competente de comunicare în domeniul tehnic','aplica standarde de sanatate si siguranta','asigura conformitatea cu legislatia de mediu','asigura conformitatea cu legislatia în materie de securitate','asigura conformitatea infrastructurii de conducte',
+'asigura conservarea resurselor de apa','asigura managementul de proiect','asigura managementul proceselor de licitatie','atenueaza impactul de mediu al proiectelor de conducte','comunica cu echipele de constructori','conduce o echipa în cadrul activitatilor legate de managementul apei','da instructiuni personalului','defineste cerinte tehnice','depisteaza defectiuni ale infrastructurii de conducte','deseneaza schite','detine competente informatice','efectueaza analiza apei',
+'efectueaza analiza riscurilor','elaboreaza previziuni statistice','elaboreaza strategii de aparare împotriva inundatiilor si a fenomenelor periculoase','elaboreaza studii tehnice în domeniul feroviar','elaboreaza studiul de fezabilitate','evalueaza impactul de mediu','examineaza constrângerile de constructie în proiectarea arhitecturala','examineaza principii tehnice','executa calcule matematice analitice',
+'foloseste instrumentele de masura','gestioneaza bugete','gestioneaza personalul geotehnic','gestioneaza proiecte de inginerie','gestioneaza proiectele de constructie a cailor ferate',
+'ia în calcul impactul proprietatilor materialelor asupra transportului prin conducte','identifica riscul de inundatii','integreaza cerintele în materie de constructie în proiectarea arhitecturala','integreaza masuri în proiecte arhitecturale','întelege terminologia financiar-bancara','interpreteaza date stiintifice pentru a evalua calitatea apei','întocmeste rapoarte de lucru','lucreaza la proiectarea conductelor','mentine relatiile cu clientii','mentine relatiile cu furnizorii','monitorizeaza santierul','ofera consiliere în domeniul constructiilor','ofera consiliere în legatura cu proiectele de irigatii','ofera consiliere pentru materiale de constructie','ofera consiliere privind destinatia terenurilor','planifica investigatii geotehnice pe teren',
+'proiecteaza conducte cu diferite învelisuri','proiecteaza harti personalizate','proiecteaza lucrari de drenaj','proiecteaza sisteme de energie electrica','proiecteaza sisteme de transport','promoveaza constientizarea problemelor legate de mediu','promoveaza proiectarea inovatoare a infrastructurii',
+'promoveaza utilizarea transportului durabil','realizeaza studii privind traseele conductelor','redacteaza rapoarte tehnice','relationeaza cu experti în domeniul feroviar','respecta codul deontologic al serviciilor de transport','respecta reglementarile juridice','satisface cerinte tehnice','sintetizeaza informatii',
+'studiaza viitoarele amplasamente ale conductelor','supravegheaza proiecte de constructii','supravegheaza siguranta mediului de lucru','utilizeaza diferite canale de comunicare',
+'utilizeaza software CAD','utilizeaza software de desen tehnic']
 keys_space=['','M_1_2','M_1_3','M_1_4','M_1_5','M_1_6','M_1_8','M_2_1','M_2_2','M_2_3','M_2_2_1','M_2_3_1','M_2_4','M_2_5','M_2_6','M_2_7_1','M_2_7_2',
 	    'M_3_8','M_3_9','M_3_11','M_4_1','M_4_2','M_5_1','M_5_2', 'M_6_cp','M_6_ct','M_r_c','M_r_a','M_r_r','M_7_1','M_7_2','M_8_1_1','M_8_1_2','M_8_1_3','M_8_1_4','M_8_1_5',
 	    'M_8_1_6', 'M_8_1_7','M_8_1_8', 'M_8_1_9','M_8_1_10','M_8_1_11','M_8_1_12','M_8_1_13','M_8_1_14','M_8_1_mp','8_1_o','Biblio_c','M_8_2_1',
@@ -864,8 +882,23 @@ if not(st.session_state['ut']):
                st.text_area('4.2 Preconditii de competente',value=data_fis['M_4_2'],key='M_4_2',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
                st.text_area('5.1 Conditii de desfasurare a cursului',value=data_fis['M_5_1'],key='M_5_1',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")        
                st.text_area('5.2 Conditii de desfasurare a aplicatiilor',value=data_fis['M_5_2'],key='M_5_2',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('6.a Competente profesionale acumulate',value=data_fis['M_6_cp'],key='M_6_cp',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")              
-               st.text_area('6.b Competente transversale',value=data_fis['M_6_ct'],key='M_6_ct',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")            
+               add_selectbox_cp = st.multiselect('6.a Competente profesionale acumulate',c_spec,help='Pot fi alese oricate competente.')
+			                           
+               ss=''
+               for d in add_selectbox_cp:
+                            ss+=d.title()+'\n'
+                        
+               ss=ss[:len(ss)-1]      
+               st.session_state['M_6_cp']=ss
+               #st.text_area('6.a Competente profesionale acumulate',value=data_fis['M_6_cp'],key='M_6_cp',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")              
+               add_selectbox_ct = st.multiselect('6.b Competente transversale',c_trans,help='Pot fi alese oricate competente.')
+               ss=''
+               for d in add_selectbox_ct:
+                            ss+=d.title()+'\n'
+                        
+               ss=ss[:len(ss)-1]      
+               st.session_state['M_6_ct']=ss
+			   #st.text_area('6.b Competente transversale',value=data_fis['M_6_ct'],key='M_6_ct',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")            
                try:
                 st.text_area('7.1 Rezultatele asteptate a invatarii - Cunostiinte',value=data_fis['M_r_c'],key='M_r_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
                except:  
@@ -1035,6 +1068,7 @@ if not(st.session_state['ut']):
                 ftp_server1.cwd('./public_html/Fise/2025_r')
                 ftp_server1.storbinary(f'STOR {file_name}', docx_buff)
                 ftp_server1.quit()
+
 
 
 
