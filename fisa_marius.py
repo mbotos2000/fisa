@@ -541,11 +541,11 @@ def load_ftp_file():
     # Download DOCX templates
     docx_files = {}
     for filename in [
-        "fisa_template_Mail_.docx", 
+        "fisa_template_Mail_R.docx", 
         "fisa_template_Mail_eng.docx", 
-        "fisa_template_Mail_curs_.docx",
+        "fisa_template_Mail_curs_R.docx",
         "fisa_template_Mail_curs_eng.docx",
-        "fisa_template_Mail_aplicatie_.docx",
+        "fisa_template_Mail_aplicatie_R.docx",
         "fisa_template_Mail_aplicatie_eng.docx"
     ]:
         file_data = BytesIO()
@@ -964,7 +964,7 @@ if not(st.session_state['ut']):
                 keys_to_merge=['denumirefisa','dataintocmire','M_1_1','M_1_2','M_1_3','M_1_4','M_1_5','M_1_6','M_1_8',
                                'M_2_1','M_2_2','M_2_3','M_2_3_1','M_2_4','M_2_5','M_2_6','M_2_2_1','M_2_7_1','M_2_7_2',
                                'M_3_1','M_3_2','M_3_3_l','M_3_3_s','M_3_3_p','M_3_4','M_3_5','M_3_6_s','M_3_6_l','M_3_6_p','M_3_7_a','M_3_7_b','M_3_7_c','M_3_7_d','M_3_7_e','M_3_7_f',
-                               'M_3_8','M_3_9','M_3_11','M_4_1','M_4_2','M_5_1','M_5_2','M_6_cp','M_6_ct','M_7_1','M_7_2',
+                               'M_3_8','M_3_9','M_3_11','M_4_1','M_4_2','M_5_1','M_5_2','M_6_cp','M_6_ct','M_r_c','M_r_a','M_r_r','M_7_1','M_7_2',
                                'M_8_1_1','M_8_1_2','M_8_1_3','M_8_1_4','M_8_1_5','M_8_1_6','M_8_1_7','M_8_1_8','M_8_1_9','M_8_1_11','M_8_1_12','M_8_1_13','M_8_1_14','Biblio_c',
                                'M_8_2_1','M_8_2_2','M_8_2_3','M_8_2_4','M_8_2_5','M_8_2_6','M_8_2_7','M_8_2_8','M_8_2_9','M_8_2_10','M_8_2_12','M_8_2_13','M_8_2_14','Biblio_a','M_9',
                                'M_10_1_a','M_10_1_c','M_10_2_c','M_10_3_a','M_10_3_c','M_10_6','M_10_2_a','M_8_1_10',
@@ -1014,7 +1014,7 @@ if not(st.session_state['ut']):
                 ftp_server1.login(user=st.secrets['u'], passwd=st.secrets['p'])
                 ftp_server1.prot_p()
                 ftp_server1.encoding = "utf-8"
-                ftp_server1.cwd('./public_html/Fise/2025')
+                ftp_server1.cwd('./public_html/Fise/2025_r')
                 ftp_server1.storbinary(f'STOR {remote_filename}', pickle_buffer)  # Send the file
                 #ftp_server1.storbinary(f'STOR {remote_filename_csv}', csv_buffer)
                 ftp_server1.quit()
@@ -1025,7 +1025,8 @@ if not(st.session_state['ut']):
                 ftp_server1.login(user=st.secrets['u'], passwd=st.secrets['p'])
                 ftp_server1.prot_p()
                 ftp_server1.encoding = "utf-8"
-                ftp_server1.cwd('./public_html/Fise/2025')
+                ftp_server1.cwd('./public_html/Fise/2025_r')
                 ftp_server1.storbinary(f'STOR {file_name}', docx_buff)
                 ftp_server1.quit()
+
 
