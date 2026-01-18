@@ -869,8 +869,7 @@ if not(st.session_state['ut']):
                st.text_area('7.1 Rezultatele asteptate a invatarii - Cunostiinte',value=data_fis['M_r_c'],key='M_r_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
                st.text_area('7.2 Rezultatele asteptate a invatarii - Abilitati',value=data_fis['M_r_a'],key='M_r_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
                st.text_area('7.3 Rezultatele asteptate a invatarii - Responsabilitatea si autonomie',value=data_fis['M_r_r'],key='M_r_r',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-            
-			   st.text_area('8.1 Obiectivul general al disciplinei',value=data_fis['M_7_1'],key='M_7_1',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('8.1 Obiectivul general al disciplinei',value=data_fis['M_7_1'],key='M_7_1',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
                st.text_area('8.2 Obiectivele specifice',value=data_fis['M_7_2'],key='M_7_2',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
             
                if st.session_state['test_curs']:         
@@ -1027,6 +1026,7 @@ if not(st.session_state['ut']):
                 ftp_server1.cwd('./public_html/Fise/2025_r')
                 ftp_server1.storbinary(f'STOR {file_name}', docx_buff)
                 ftp_server1.quit()
+
 
 
 
