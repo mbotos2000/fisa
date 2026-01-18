@@ -193,6 +193,15 @@ def schimba_M_6_cp(new):
 def schimba_M_6_ct(new):
     st.session_state['M_6_ct'] = str(new)
 
+def schimba_M_r_c(new):
+    st.session_state['M_r_c'] = str(new)
+
+def schimba_M_r_a(new):
+    st.session_state['M_r_a'] = str(new)
+
+def schimba_M_r_r(new):
+    st.session_state['M_r_r'] = str(new)
+	
 def schimba_M_7_1(new):
     st.session_state['M_7_1'] = str(new)
 
@@ -411,7 +420,7 @@ keys_none=['cap2','cap3','cap4','resetare' ,'file','M_8_1_o1','M_8_1_mp1','M_8_1
 for key in keys_none:
     st.session_state.setdefault(key, None)
 keys_space=['','M_1_2','M_1_3','M_1_4','M_1_5','M_1_6','M_1_8','M_2_1','M_2_2','M_2_3','M_2_2_1','M_2_3_1','M_2_4','M_2_5','M_2_6','M_2_7_1','M_2_7_2',
-	    'M_3_8','M_3_9','M_3_11','M_4_1','M_4_2','M_5_1','M_5_2', 'M_6_cp','M_6_ct','M_7_1','M_7_2','M_8_1_1','M_8_1_2','M_8_1_3','M_8_1_4','M_8_1_5',
+	    'M_3_8','M_3_9','M_3_11','M_4_1','M_4_2','M_5_1','M_5_2', 'M_6_cp','M_6_ct','M_r_c','M_r_a','M_r_r','M_7_1','M_7_2','M_8_1_1','M_8_1_2','M_8_1_3','M_8_1_4','M_8_1_5',
 	    'M_8_1_6', 'M_8_1_7','M_8_1_8', 'M_8_1_9','M_8_1_10','M_8_1_11','M_8_1_12','M_8_1_13','M_8_1_14','M_8_1_mp','8_1_o','Biblio_c','M_8_2_1',
 	    'M_8_2_2','M_8_2_3','M_8_2_4','M_8_2_5','M_8_2_6','M_8_2_7','M_8_2_8','M_8_2_9','M_8_2_10','M_8_2_11','M_8_2_12','M_8_2_13','M_8_2_14',
 	    '8_1_mp','8_1_o','Biblio_a','9','10_1_c','10_2_c','10_3_c','10_1_a','10_2_a','10_3_a','10_6','da_cu','data_dep','data_fac','dir_dep','tip','mail','dep']
@@ -561,11 +570,11 @@ def load_ftp_file():
     return (
         csv_data["lista_cd.csv"], 
         csv_data["planinv_2025.csv"], 
-        docx_files["fisa_template_Mail_.docx"], 
+        docx_files["fisa_template_Mail_R.docx"], 
         docx_files["fisa_template_Mail_eng.docx"], 
-        docx_files["fisa_template_Mail_curs_.docx"], 
+        docx_files["fisa_template_Mail_curs_R.docx"], 
         docx_files["fisa_template_Mail_curs_eng.docx"], 
-        docx_files["fisa_template_Mail_aplicatie_.docx"], 
+        docx_files["fisa_template_Mail_aplicatie_R.docx"], 
         docx_files["fisa_template_Mail_aplicatie_eng.docx"],
         csv_data["lista_cd.csv"],pkl_files
     )
@@ -857,8 +866,13 @@ if not(st.session_state['ut']):
                st.text_area('5.2 Conditii de desfasurare a aplicatiilor',value=data_fis['M_5_2'],key='M_5_2',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
                st.text_area('6.a Competente profesionale acumulate',value=data_fis['M_6_cp'],key='M_6_cp',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")              
                st.text_area('6.b Competente transversale',value=data_fis['M_6_ct'],key='M_6_ct',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")            
-               st.text_area('7.1 Obiectivul general al disciplinei',value=data_fis['M_7_1'],key='M_7_1',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('7.2 Obiectivele specifice',value=data_fis['M_7_2'],key='M_7_2',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+                              
+			   st.text_area('7.1 Rezultatele asteptate a invatarii - Cunostiinte',value=data_fis['M_r_c'],key='M_r_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('7.2 Rezultatele asteptate a invatarii - Abilitati',value=data_fis['M_r_a'],key='M_r_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('7.3 Rezultatele asteptate a invatarii - Responsabilitatea si autonomie',value=data_fis['M_r_r'],key='M_r_r',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+            
+			   st.text_area('8.1 Obiectivul general al disciplinei',value=data_fis['M_7_1'],key='M_7_1',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('8.2 Obiectivele specifice',value=data_fis['M_7_2'],key='M_7_2',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
             
                if st.session_state['test_curs']:         
                   st.text_area('Curs 1',value=data_fis['M_8_1_1'],key='M_8_1_1',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")                 
@@ -897,14 +911,14 @@ if not(st.session_state['ut']):
                   st.text_area('Observatii-aplicatii',data_fis['M_8_1_o1'],key='M_8_1_o1',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
                   st.text_area('Bibliografie-Aplicatii',data_fis['Biblio_a'],key='Biblio_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
 
-               st.text_area('9. Coroborarea conținuturilor disciplinei cu așteptările reprezentanţilor comunităţii epistemice, a.p. s.a.m.d. din domeniul aferent programului',data_fis['M_9'],key='M_9')
-               st.text_area('10.1 Criterii de evaluare curs',data_fis['M_10_1_c'],key='M_10_1_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('10.2 Metode de evaluare curs',data_fis['M_10_2_c'],key='M_10_2_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('10.1.1 Criterii de evaluare aplicatii',data_fis['M_10_1_a'],key='M_10_1_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('10.2 Metode de evaluare aplicatii',data_fis['M_10_2_a'],key='M_10_2_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('10.3 Ponderea notei la curs in nota finala',data_fis['M_10_3_c'],key='M_10_3_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('10.3.1 Ponderea notei la aplicatii in nota finala',data_fis['M_10_3_a'],key='M_10_3_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
-               st.text_area('10.6 Standard minim de performanţă',data_fis['M_10_6'],key='M_10_6',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('10. Coroborarea conținuturilor disciplinei cu așteptările reprezentanţilor comunităţii epistemice, a.p. s.a.m.d. din domeniul aferent programului',data_fis['M_9'],key='M_9')
+               st.text_area('11.1 Criterii de evaluare curs',data_fis['M_10_1_c'],key='M_10_1_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('11.2 Metode de evaluare curs',data_fis['M_10_2_c'],key='M_10_2_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('11.1.1 Criterii de evaluare aplicatii',data_fis['M_10_1_a'],key='M_10_1_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('11.2 Metode de evaluare aplicatii',data_fis['M_10_2_a'],key='M_10_2_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('11.3 Ponderea notei la curs in nota finala',data_fis['M_10_3_c'],key='M_10_3_c',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('11.3.1 Ponderea notei la aplicatii in nota finala',data_fis['M_10_3_a'],key='M_10_3_a',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
+               st.text_area('11.6 Standard minim de performanţă',data_fis['M_10_6'],key='M_10_6',placeholder="Completati manual. Aplicatia nu a reusit sa identifice text in fisa incarcata!")
               #d_com=st.date_input("Data completarii",date.today())
 
                d_com=date.today()
@@ -1014,3 +1028,4 @@ if not(st.session_state['ut']):
                 ftp_server1.cwd('./public_html/Fise/2025')
                 ftp_server1.storbinary(f'STOR {file_name}', docx_buff)
                 ftp_server1.quit()
+
