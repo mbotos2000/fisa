@@ -14,7 +14,7 @@ from difflib import get_close_matches
 import pickle
 import string
 #from docx import Document
-
+from google import genai
 def preprocess(text):
     return text.strip().lower().translate(str.maketrans('', '', string.punctuation))
 
@@ -1068,6 +1068,7 @@ if not(st.session_state['ut']):
                 ftp_server1.cwd('./public_html/Fise/2025_r')
                 ftp_server1.storbinary(f'STOR {file_name}', docx_buff)
                 ftp_server1.quit()
+
 
 
 
