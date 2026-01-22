@@ -1,5 +1,6 @@
 from __future__ import print_function
 from io import BytesIO
+from google import genai
 from datetime import *
 import streamlit as st
 import pandas as pd
@@ -1067,6 +1068,7 @@ if not(st.session_state['ut']):
                 ftp_server1.cwd('./public_html/Fise/2025_r')
                 ftp_server1.storbinary(f'STOR {file_name}', docx_buff)
                 ftp_server1.quit()
+
 
 
 
