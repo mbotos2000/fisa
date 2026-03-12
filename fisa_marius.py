@@ -436,7 +436,7 @@ c_spec=['abordeaza problemele în mod critic','ajusteaza proiectele produselor',
 'promoveaza utilizarea transportului durabil','realizeaza studii privind traseele conductelor','redacteaza rapoarte tehnice','relationeaza cu experti în domeniul feroviar','respecta codul deontologic al serviciilor de transport','respecta reglementarile juridice','satisface cerinte tehnice','sintetizeaza informatii',
 'studiaza viitoarele amplasamente ale conductelor','supravegheaza proiecte de constructii','supravegheaza siguranta mediului de lucru','utilizeaza diferite canale de comunicare',
 'utilizeaza software CAD','utilizeaza software de desen tehnic']
-keys_space=['','M_1_2','M_1_3','M_1_4','M_1_5','M_1_6','M_1_8','M_2_1','M_2_2','M_2_3','M_2_2_1','M_2_3_1','M_2_4','M_2_5','M_2_6','M_2_7_1','M_2_7_2',
+keys_space=['M_1_2','M_1_3','M_1_4','M_1_5','M_1_6','M_1_8','M_2_1','M_2_2','M_2_3','M_2_2_1','M_2_3_1','M_2_4','M_2_5','M_2_6','M_2_7_1','M_2_7_2',
 	    'M_3_8','M_3_9','M_3_11','M_4_1','M_4_2','M_5_1','M_5_2', 'M_6_cp','M_6_ct','M_r_c','M_r_a','M_r_r','M_7_1','M_7_2','M_8_1_1','M_8_1_2','M_8_1_3','M_8_1_4','M_8_1_5',
 	    'M_8_1_6', 'M_8_1_7','M_8_1_8', 'M_8_1_9','M_8_1_10','M_8_1_11','M_8_1_12','M_8_1_13','M_8_1_14','M_8_1_mp','8_1_o','Biblio_c','M_8_2_1',
 	    'M_8_2_2','M_8_2_3','M_8_2_4','M_8_2_5','M_8_2_6','M_8_2_7','M_8_2_8','M_8_2_9','M_8_2_10','M_8_2_11','M_8_2_12','M_8_2_13','M_8_2_14',
@@ -1067,6 +1067,7 @@ if not(st.session_state['ut']):
                 ftp_server1.cwd('./public_html/Fise/2025_r')
                 ftp_server1.storbinary(f'STOR {file_name}', docx_buff)
                 ftp_server1.quit()
+
 
 
 
